@@ -1,0 +1,23 @@
+{
+  "name": "multiapi",
+  "version": "1.0.0",
+  "description": "API desenvolvida para o trabalho de AM 2017 - FIAP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Nathália Guimarães",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "bootstrap": "^3.3.7",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "jquery": "^3.2.1",
+    "mysql": "^2.14.1"
+  }
+}
