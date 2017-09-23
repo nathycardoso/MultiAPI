@@ -21,9 +21,9 @@ EventosDAO.prototype.insert = function (data,values,callback) {
   this._connection.query('INSERT INTO eventos VALUES (?)',[values],callback);
 };
 
-EventosDAO.prototype.update = function (data,callback) {
+EventosDAO.prototype.update = function (data,id,callback) {
   values = Object.keys(data).map(function (key) { return data[key]; });
-  this._connection.query('UPDATE eventos SET nome = (?) WHERE ID = (?)',[data.nome,data.id],callback);
+  this._connection.query('UPDATE eventos SET nome = (?), local = (?), descricao = (?) WHERE ID = (?)',[data.nome,data.local,data.descricao,id],callback);
 };
 
 module.exports = function(){

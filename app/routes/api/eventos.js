@@ -56,9 +56,11 @@ module.exports = function(app){
   })
 
   // PUT - ATUALIZACAO DE DADOS
-  app.put('/api/eventos',function(request,response){
+  app.put('/api/eventos/:id',function(request,response){
 
-    EventosDAO.update(request.body,function(error,result){
+    var id = request.params.id;
+
+    EventosDAO.update(request.body,id,function(error,result){
       response.render('api/eventos/result', {result: JSON.stringify(result)});
     });
   })

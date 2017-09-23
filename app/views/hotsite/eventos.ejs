@@ -10,8 +10,9 @@
         <div class="thumbnail">
           <img onerror="imgError(this);" src="./public/images/<%=eventos[i].local%>.png" alt="">
           <div class="caption">
-            <h3><%=eventos[i].nome%></h3>
-            <p><%=eventos[i].descricao%></p>
+            <h3 id="nome_<%=eventos[i].id%>"><%=eventos[i].nome%></h3>
+            <p id="descricao_<%=eventos[i].id%>"><%=eventos[i].descricao%></p>
+            <input type="hidden" id="local_<%=eventos[i].id%>" value="<%=eventos[i].local%>">
             <div class="row">
               <div class="col-md-6">
                 <button type="button" class="btn-excluir btn-block btn btn-danger" id="<%=eventos[i].id%>">Excluir</button>
@@ -30,6 +31,51 @@
     </div>
   </div>
 </main>
+
+<!-- MODAL DE ALTERAÇÃO DE EVENTO -->
+<div class="modal fade modal-alterar" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Alterar evento</h4>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label for="nome">Nome do evento</label>
+              <input type="text" class="form-control required" name="nome" id="nome">
+            </div>
+            <div class="col-md-12 form-group">
+              <label for="local"> Local</label>
+              <select name="local" id="local" class="form-control required">
+                <option value="">Selecione</option>
+                <option value="ibm">IBM</option>
+                <option value="arbit">Arbit</option>
+                <option value="fiap">FIAP</option>
+                <option value="gol">GOL</option>
+                <option value="google">GOOGLE</option>
+                <option value="votorantim">Votorantim</option>
+                <option value="investeae">InvesteAE</option>
+              </select>
+            </div>
+            <div class="col-md-12 form-group">
+              <label for="descricao">Descrição</label>
+              <textarea name="descricao" id="descricao" rows="3" class="form-control required"></textarea>
+            </div>
+          </div>
+        </form>
+        <input type="hidden" id="evento_id" >
+      </div>
+      <div class="modal-footer">
+        <button id="btn-update" class="btn btn-success btn-block">Salvar Alterações</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <%- include('../helpers/footer'); %>
 <script src="/public/js/eventos/listar.js"></script>
 <script src="/public/js/eventos/excluir.js"></script>
+<script src="/public/js/eventos/alterar.js"></script>
