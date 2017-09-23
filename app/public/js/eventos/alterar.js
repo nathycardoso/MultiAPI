@@ -21,10 +21,23 @@ $(document).ready(function(){
   $('#btn-update').click(function(){
     var errors = validateRequired('#form .required');
 
+    var action, url = '';
+
+    if ($('#evento_id').val() == '') {
+      action = 'POST';
+      url = '/api/eventos/';
+
+    }else {
+      action = 'PUT';
+      url =  '/api/eventos/'+$('#evento_id').val();
+    }
+
+    console.log(action);
+
     if (errors == 0) {
       $.ajax({
-          url: '/api/eventos/'+$('#evento_id').val(),
-          type: 'PUT',
+          url: url,
+          type: action,
           data:$('#form').serialize(),
           success: function(result) {
             setTimeout(function() {

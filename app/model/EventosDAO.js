@@ -18,7 +18,7 @@ EventosDAO.prototype.delete = function (id,callback) {
 
 EventosDAO.prototype.insert = function (data,values,callback) {
   values = Object.keys(data).map(function (key) { return data[key]; });
-  this._connection.query('INSERT INTO eventos VALUES (?)',[values],callback);
+  this._connection.query('INSERT INTO eventos(id,nome,local,descricao) VALUES (NULL,?)',[values],callback);
 };
 
 EventosDAO.prototype.update = function (data,id,callback) {
