@@ -1,4 +1,7 @@
 main {
   min-height: 400px; }
 
+.text-upper {
+  text-transform: uppercase; }
+
 /*# sourceMappingURL=global.css.map */

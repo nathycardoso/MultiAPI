@@ -4,8 +4,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <button class="btn btn-success pull-right" id="btn-adicionar">
-          Adicionar novo envento
+        <button class="btn btn-success pull-right text-upper" id="btn-adicionar">
+          <i class="fa fa-plus" aria-hidden="true"></i> novo envento
         </button>
       </div>
     </div>
@@ -22,11 +22,12 @@
             <p id="descricao_<%=eventos[i].id%>"><%=eventos[i].descricao%></p>
             <input type="hidden" id="local_<%=eventos[i].id%>" value="<%=eventos[i].local%>">
             <div class="row">
-              <div class="col-md-6">
-                <button type="button" class="btn-excluir btn-block btn btn-danger" id="<%=eventos[i].id%>">Excluir</button>
+              <hr>
+              <div class="col-md-2 pull-right">
+                <button type="button" class="btn-editar btn btn-primary" id="<%=eventos[i].id%>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
               </div>
-              <div class="col-md-6">
-                <button type="button" class="btn-editar btn-block btn btn-primary" id="<%=eventos[i].id%>">Editar</button>
+              <div class="col-md-2 pull-right">
+                <button type="button" class="btn-excluir btn btn-danger" id="<%=eventos[i].id%>"><i class="fa fa-times" aria-hidden="true"></i></button>
               </div>
             </div>
           </div>
@@ -77,7 +78,7 @@
         <input type="hidden" id="evento_id" >
       </div>
       <div class="modal-footer">
-        <button id="btn-update" class="btn btn-success btn-block">Salvar Alterações</button>
+        <button id="btn-update" class="btn btn-success btn-block text-upper">Salvar Alterações</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
