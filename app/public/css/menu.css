@@ -1,0 +1,27 @@
+.navbar-default {
+  background-color: #fff; }
+  .navbar-default .navbar-brand {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9b69b9;
+    font-family: 'Architects Daughter', cursive; }
+  .navbar-default .navbar-header {
+    padding: 23px; }
+  .navbar-default .container-fluid {
+    height: 95px; }
+  .navbar-default li {
+    padding: 23px;
+    text-transform: uppercase; }
+    .navbar-default li:hover, .navbar-default li:link, .navbar-default li:active, .navbar-default li:visited {
+      border-bottom: 2px solid #cbb1da; }
+      .navbar-default li:hover a, .navbar-default li:link a, .navbar-default li:active a, .navbar-default li:visited a {
+        font-weight: 700; }
+    .navbar-default li a {
+      letter-spacing: 1px; }
+  .navbar-default .navbar-nav .active a {
+    background-color: transparent; }
+    .navbar-default .navbar-nav .active a:hover {
+      background-color: transparent; }
+
+/*# sourceMappingURL=menu.css.map */

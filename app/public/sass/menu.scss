@@ -1,0 +1,39 @@
+@mixin setMenuLinkSelectorStyle {
+  &:hover, &:link, &:active, &:visited {
+        border-bottom: 2px solid #cbb1da;
+        a{
+          font-weight: 700;
+        }
+    }
+}
+
+.navbar-default{
+  background-color: #fff;
+  .navbar-brand{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9b69b9;
+    font-family: 'Architects Daughter', cursive;
+  }
+  .navbar-header,{
+    padding: 23px;
+  }
+  .container-fluid{
+    height: 95px;
+  }
+  li{
+    padding: 23px;
+    text-transform: uppercase;;
+    @include setMenuLinkSelectorStyle{}
+    a{
+      letter-spacing: 1px;
+    }
+  }
+  .navbar-nav .active a{
+    background-color: transparent;
+    &:hover{
+      background-color: transparent;
+    }
+  }
+}

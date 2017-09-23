@@ -1,6 +1,7 @@
 module.exports = function(){
   // INICIA COM O EXPRESS
-  this.server =  require('express')();
+  var express = require('express');
+  this.server =  express();
 
   // ROTAS PARA LINKS DE JS E CSS
   this.server.use('/public',express.static('./app/public'));
