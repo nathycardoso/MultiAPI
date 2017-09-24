@@ -32,9 +32,10 @@ $(document).ready(function(){
       url =  '/api/eventos/'+$('#evento_id').val();
     }
 
-    console.log(action);
-
     if (errors == 0) {
+      $('.modal-alterar').modal('hide');
+      $('.modal-loading').modal('show');
+
       $.ajax({
           url: url,
           type: action,

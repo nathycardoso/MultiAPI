@@ -50,12 +50,9 @@ module.exports = function(app){
   // POST - INSERCAO DE DADOS
   app.post('/api/eventos',function(request,response){
     EventosDAO.insert(request.body,function(error,result){
-      console.log(result);
-      console.log('retornou');
-      // response.render('api/eventos/result', {result: JSON.stringify(result)});
-      res.status(201).json(JSON.stringify(result));
-      
+      response.render('api/eventos/result', {result: JSON.stringify(result)});
     });
+    response.end();
   })
 
   // PUT - ATUALIZACAO DE DADOS
