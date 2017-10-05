@@ -32,6 +32,7 @@ module.exports = function(){
                                       .include('./app/config/db.js')
                                       .then('./app/model')
                                       .then('./app/routes')
+                                      .then('./app/controllers')
                                       .into(this.server);
   return this.server;
 }
